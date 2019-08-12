@@ -12,3 +12,11 @@ testintegration
 uncompress
 unit
 *.a
+
+\.idea/
+
+Makefile
+
+cmake-build-debug/
+
+CMakeFiles/
