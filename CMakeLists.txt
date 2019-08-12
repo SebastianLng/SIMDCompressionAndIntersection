@@ -3,7 +3,7 @@
 #
 # Copyright (c) 2012 Louis Dionne
 #
-cmake_minimum_required(VERSION 2.8.7)
+cmake_minimum_required(VERSION 3.3.0 FATAL_ERROR)
 set (CMAKE_CXX_STANDARD 11) # for constexpr specifier and other goodies
 
 if (NOT CMAKE_BUILD_TYPE)
@@ -16,7 +16,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake_modules")
 include(AppendCompilerFlags)
 
 
-project(SIMDCompressionAndIntersection CXX C)
+project(SIMDCompressionAndIntersection VERSION 0.1.1 LANGUAGES CXX C)
 set(PROJECT_URL "https://github.com/lemire/SIMDCompressionAndIntersection")
 set(PROJECT_DESCRIPTION "A C++ library to compress and intersect sorted lists of integers using SIMD instructions")
 
