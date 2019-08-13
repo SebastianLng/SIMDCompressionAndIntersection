@@ -126,5 +126,4 @@ add_library(SIMDCompressionAndIntersection STATIC src/benchintersection.cpp
         )
 
 
-add_executable(example example.cpp)
-target_link_libraries(example SIMDCompressionAndIntersection)
+target_include_directories(SIMDCompressionAndIntersection PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include)
