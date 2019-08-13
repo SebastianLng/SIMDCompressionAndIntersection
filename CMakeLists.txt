@@ -105,25 +105,20 @@ MESSAGE( STATUS "CMAKE_C_FLAGS_RELEASE: " ${CMAKE_C_FLAGS_RELEASE} )
 
 # library target
 include_directories(include)
-add_library(SIMDCompressionAndIntersection STATIC src/benchintersection.cpp
-        src/benchsearch.cpp
+add_library(SIMDCompressionAndIntersection STATIC
         src/bitpacking.cpp
-        src/frameofreference.cpp
         src/integratedbitpacking.cpp
-        src/intersection.cpp
         src/simdbitpacking.cpp
-        src/simdintegratedbitpacking.cpp
-        src/testcodecs.cpp
-        src/testintegration.cpp
-        src/unit.cpp
         src/usimdbitpacking.cpp
+        src/simdintegratedbitpacking.cpp
+        src/intersection.cpp
+        src/varintdecode.c
+        src/streamvbyte.c
         src/simdpackedsearch.c
         src/simdpackedselect.c
-        src/streamvbyte.c
-        src/varintdecode.c
+        src/frameofreference.cpp
         src/for.c
         ${HEADERS}
         )
-
 
 target_include_directories(SIMDCompressionAndIntersection PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include)
